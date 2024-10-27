@@ -4,6 +4,8 @@ import GoogleProvider from "next-auth/providers/google";
 
 const handler = NextAuth({
     debug: true,
+    site: process.env.NEXTAUTH_URL,
+
     secret: process.env.NEXTAUTH_SECRET,
     providers: [
         GoogleProvider({
